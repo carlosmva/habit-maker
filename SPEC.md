@@ -4,7 +4,7 @@
 > a monthly habit-tracker "dashboard" laid out like a dark-themed spreadsheet.
 > This spec re-implements that concept as a native desktop app.
 
-**Stack:** Tauri 2 · Angular 18+ (standalone, signals) · Rust backend · SQLite (local, offline-first)
+**Stack:** Tauri 2 · Angular 22 (standalone, signals) · Rust backend · SQLite (local, offline-first)
 
 ---
 
@@ -99,7 +99,7 @@ The core loop:
 | Layer | Choice | Notes |
 |---|---|---|
 | Shell | **Tauri 2** | Small binary, Rust backend, native webview. |
-| Frontend | **Angular 18+** standalone components, **signals** for state, Angular Router for views. |
+| Frontend | **Angular 22** standalone components, **signals** for state, Angular Router for views. |
 | UI charts | **ngx-charts** *or* lightweight custom SVG | Bars/donut/line are simple; custom SVG avoids heavy deps. Recommend custom SVG components for the 3 chart types. |
 | DB | **SQLite** via **`rusqlite`** (bundled feature) + **`r2d2` / `r2d2_sqlite`** pool | Full control over aggregation queries. `refinery` or hand-rolled `PRAGMA user_version` migrations. |
 | Serialization | **serde** / `serde_json` | Typed DTOs shared conceptually with TS interfaces. |

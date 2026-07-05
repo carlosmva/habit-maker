@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+ * B&W spreadsheet theme — matches the reference recording:
+ * dark "chrome" (header bands, habit column, sidebar) + a light/white data grid,
+ * monochrome black bar charts, donut and progress bars.
+ */
+:root {
+  --bg: #dcdce0;            /* app backdrop behind the "sheet" */
+  --panel-bg: #ffffff;      /* white panels + grid body */
+  --surface: #f3f3f6;       /* subtle light surface (inputs, value boxes) */
+  --band: #131316;          /* black header bands / dark chrome */
+  --band-text: #ffffff;     /* text on dark bands */
+  --border: #d1d1d8;        /* light gridlines */
+  --border-strong: #a9a9b3;
+  --text: #17171a;          /* near-black text on light */
+  --text-muted: #6a6a73;
+  --accent: #131316;        /* monochrome accent = black */
+  --accent-dim: rgba(0, 0, 0, 0.06);
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --today-col: rgba(37, 99, 235, 0.1);
+  --checkbox-checked: #131316;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+.card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* Solid black header band with bold white text — the signature element of the reference. */
+.band-title {
+  margin: -1rem -1rem 1rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--band);
+  color: var(--band-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 4px 4px 0 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.875rem;
+  transition: background 0.15s;
+}
+.btn:hover {
+  background: var(--hover-bg);
+}
+.btn-primary {
+  background: var(--band);
+  border-color: var(--band);
+  color: var(--band-text);
+}
+.btn-primary:hover {
+  filter: brightness(1.4);
+}
+.btn-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.form-group label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.form-group input,
+.form-group select {
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+/* Stat tile: black band header + light value box (Goal / Completed / Left). */
+.stat-tile {
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+.stat-tile .label {
+  background: var(--band);
+  color: var(--band-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.5rem;
+}
+.stat-tile .value {
+  background: var(--surface);
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 0.6rem;
+}
+
+.month-tabs {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.month-tab {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--panel-bg);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.month-tab:hover {
+  color: var(--text);
+  background: var(--hover-bg);
+}
+.month-tab.active {
+  background: var(--band);
+  border-color: var(--band);
+  color: var(--band-text);
+}
