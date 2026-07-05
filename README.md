@@ -13,6 +13,7 @@
   <a href="https://angular.dev/"><img src="https://img.shields.io/badge/Angular-22-DD0031?logo=angular&logoColor=white" alt="Angular 22" /></a>
   <a href="https://www.rust-lang.org/"><img src="https://img.shields.io/badge/Rust-backend-000000?logo=rust&logoColor=white" alt="Rust" /></a>
   <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-local-003B57?logo=sqlite&logoColor=white" alt="SQLite" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License" /></a>
 </p>
 
 ---
@@ -116,4 +117,8 @@ Contributions are welcome. Please open an issue to discuss larger changes before
 
 ## License
 
-License not yet specified. See repository settings or add a `LICENSE` file when ready.
+This project is open source under the [MIT License](./LICENSE).
+
+Copyright (c) 2026 Northeastern Software Services LLC
+
+You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the conditions in the license file.
