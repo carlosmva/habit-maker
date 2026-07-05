@@ -21,10 +21,29 @@
 ## Demo
 
 <p align="center">
-  <video src="images/habit-maker.mp4" width="800" controls>
-    Your browser does not support the video tag. <a href="images/habit-maker.mp4">Watch the demo</a>.
-  </video>
+  <img src="images/demo/01-tracker-month.png" alt="Monthly habit grid for July 2026" width="800" />
 </p>
+<p align="center"><em>Monthly habit grid — habits as rows, days as columns</em></p>
+
+<p align="center">
+  <img src="images/demo/02-tracker-checkins.png" alt="Checking off habits in the grid" width="800" />
+</p>
+<p align="center"><em>Check off completed habits and watch daily progress update</em></p>
+
+<p align="center">
+  <img src="images/demo/03-wellness-logging.png" alt="Wellness logging with mood and sleep charts" width="800" />
+</p>
+<p align="center"><em>Log mood and sleep — wellness charts align with daily progress</em></p>
+
+<p align="center">
+  <img src="images/demo/04-analytics-dashboard.png" alt="Analytics dashboard with completion stats" width="800" />
+</p>
+<p align="center"><em>Analytics — completion donut, daily bars, and per-habit analysis</em></p>
+
+<p align="center">
+  <img src="images/demo/05-habits-manager.png" alt="Habit manager with create, edit, and reorder" width="800" />
+</p>
+<p align="center"><em>Habit manager — create, reorder, archive, and set monthly goals</em></p>
 
 ## Overview
 
@@ -95,7 +114,8 @@ habit-maker/
 │       ├── shared/      # Charts, month selector, analysis table
 │       └── core/        # Tauri service, models, utilities
 ├── src-tauri/           # Rust backend (commands, services, migrations)
-├── images/              # Brand assets and demo video
+├── images/              # Brand assets and README demo screenshots
+│   └── demo/            # Product showcase frames
 ├── reference/           # Reference frames from the original design
 └── SPEC.md              # Product & technical specification
 ```
