@@ -18,6 +18,14 @@
 
 ---
 
+## Demo
+
+<p align="center">
+  <video src="images/habit-maker.mp4" width="800" controls>
+    Your browser does not support the video tag. <a href="images/habit-maker.mp4">Watch the demo</a>.
+  </video>
+</p>
+
 ## Overview
 
 **Habit Maker** is a single-user, cross-platform desktop app for tracking daily habits across a calendar month and reviewing progress through built-in analytics. Everything is stored locally in SQLite — no accounts, no network, no sync.
@@ -87,7 +95,7 @@ habit-maker/
 │       ├── shared/      # Charts, month selector, analysis table
 │       └── core/        # Tauri service, models, utilities
 ├── src-tauri/           # Rust backend (commands, services, migrations)
-├── images/              # Brand assets (logo banner)
+├── images/              # Brand assets and demo video
 ├── reference/           # Reference frames from the original design
 └── SPEC.md              # Product & technical specification
 ```
